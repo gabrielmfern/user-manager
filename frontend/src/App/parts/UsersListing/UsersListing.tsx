@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { Button, Card, Dropdown, Space, Spin, Table } from 'antd';
 import { DeleteOutlined, DownOutlined, EditOutlined, UserAddOutlined } from '@ant-design/icons';
 
-import { User } from '../models/User';
+import { User } from '../../models/User';
 
 import './UsersListing.css';
 
