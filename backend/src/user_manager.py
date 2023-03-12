@@ -16,7 +16,10 @@ def index():
 
 @app.get("/users")
 def get_users():
-    return jsonify(user.get()), 200
+    return jsonify({
+        "users": user.get(),
+        "status": "success"
+    }), 200
 
 @app.get("/users/<id>")
 def get_user(id: str):
