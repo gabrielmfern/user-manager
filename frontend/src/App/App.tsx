@@ -23,7 +23,6 @@ const App: React.FC = () => {
     if (response.status === 'error') {
       message.error('Unable to fetch all of the available users!');
     } else {
-      console.log(response);
       setUsers(response.users || []);
     }
   };
@@ -36,8 +35,14 @@ const App: React.FC = () => {
     <Content className='user-manager-content'>
       <div style={{ flex: 1 }}>
         <UsersListing
-          onCreate={() => {}}
-          onDelete={() => {}}
+          onCreate={() => {
+          }}
+          onDelete={async (id) => {
+            setLoading(true);
+            await userService.deleteUserById(id);
+            await fetchUsers();
+            setLoading(false);
+          }}
           onUpdate={() => {}}
           loading={loading}
           users={users}
