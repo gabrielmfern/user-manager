@@ -21,6 +21,7 @@ const App: React.FC = () => {
     const response = await userService.getUsers();
     setLoading(false);
     if (response.status === 'error') {
+      console.error(response.message);
       message.error('Unable to fetch all of the available users!');
     } else {
       setUsers(response.users || []);
@@ -39,8 +40,13 @@ const App: React.FC = () => {
           }}
           onDelete={async (id) => {
             setLoading(true);
-            await userService.deleteUserById(id);
-            await fetchUsers();
+            const response = await userService.deleteUserById(id);
+            if (response.status === 'error') {
+              console.error(response.message);
+              message.error(`Unable to delete the user with id ${id}!`);
+            } else {
+              await fetchUsers();
+            }
             setLoading(false);
           }}
           onUpdate={() => {}}
