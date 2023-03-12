@@ -26,7 +26,7 @@ def get_user(id: str):
     resulting_user = user.get_by_id(id)
     if resulting_user is not None:
         return jsonify({
-            "users": resulting_user,
+            "user": resulting_user,
             "status": "success",
         }), 200
     else:
