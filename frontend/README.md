@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# User Manager - Front End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the front-end code responsible for interacting with the user data managed by the back-end API.
 
-## Available Scripts
+<table>
+  <tr>
+    <td><img width="50%" src="./Screenshot 1.png" alt="Screenshot of the general usage of the listing of the users" /></td>
+    <td><img width="50%" src="./Screenshot 2.png" alt="Screenshot of the creation of a user" /></td>
+  </tr>
+</table>
 
-In the project directory, you can run:
+## What is included in this project?
 
-### `npm start`
+- User interface using React with TypeScript
+- User CRUD operations (Create, Read, Update, Delete)
+- Error handling and user feedback
+- Integration with the back-end API built with Flask and Python
+- Design using Ant Design library
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to run?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Before running the front-end, make sure you have the back-end API running on localhost:5000. Then, to run the front-end, you will need to install the dependencies of the project by running the following command:
 
-### `npm test`
+```sh
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once the dependencies are installed, you can run the following command to start the front-end:
 
-### `npm run build`
+```sh
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will run the front-end in development mode on localhost:3000. To test the functionality of the front-end, you can interact with the user interface and perform CRUD operations on the user data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Design
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project uses the Ant Design library for the design of the user interface. You can learn more about Ant Design and its components by visiting their [documentation](https://ant.design/docs/react/introduce).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
