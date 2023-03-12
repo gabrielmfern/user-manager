@@ -1,15 +1,18 @@
-from flask import Flask, json, jsonify, request
+from flask import Flask, jsonify, request
+from flask_cors import CORS
+
 from user import User
 import user
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/")
 def index():
     return jsonify({
         "message": "This is an example project to show off my skills. Welcme to the API!"
     })
-
 
 @app.get("/users")
 def get_users():
