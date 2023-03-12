@@ -1,16 +1,16 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import Layout, { Content, Header } from 'antd/es/layout/layout';
-import { Button, message, Spin, Table } from 'antd';
+import Layout, { Content } from 'antd/es/layout/layout';
+import { message } from 'antd';
+
+import UsersListing from './parts/UsersListing';
 
 import { userService } from './services/userService';
 
 import { User } from './models/User';
 
 import './App.css';
-import Card from 'antd/es/card/Card';
-import { UserAddOutlined } from '@ant-design/icons';
-import UsersListing from './parts/UsersListing';
+
 
 const App: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -32,16 +32,8 @@ const App: React.FC = () => {
     fetchUsers();
   }, []);
 
-  return <Layout style={{ width: '100%', height: '100vh' }}>
-    <Content style={{
-      marginInline: 'auto',
-      width: '100%',
-      maxWidth: '1000px',
-      flexGrow: 1,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
+  return <Layout className='global-layout'>
+    <Content className='user-manager-content'>
       <div style={{ flex: 1 }}>
         <UsersListing
           onCreate={() => {}}

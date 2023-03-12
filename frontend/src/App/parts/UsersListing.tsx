@@ -5,6 +5,8 @@ import { DeleteOutlined, DownOutlined, EditOutlined, UserAddOutlined } from '@an
 
 import { User } from '../models/User';
 
+import './UsersListing.css';
+
 export type UsersListingProps = {
   loading: boolean,
   onDelete: (id: string) => void,
@@ -15,48 +17,40 @@ export type UsersListingProps = {
 
 const UsersListing: React.FC<UsersListingProps> = ({ loading, users, onDelete, onUpdate, onCreate }) => {
   const userTableData = useMemo(
-    () => users.map(user => ({ 
+    () => users.map(user => ({
       key: user.id,
-      actions: <Dropdown menu={{ items: [
-        {
-          key: 'edit',
-          label: 'Edit',
-          onClick: () => onUpdate(user.id),
-          icon: <EditOutlined/>
-        },
-        {
-          key: 'delete',
-          label: 'Delete',
-          onClick: () => onDelete(user.id),
-          icon: <DeleteOutlined/>
-        },
-      ] }}>
+      actions: (<Dropdown
+        menu={{
+          items: [
+            {
+              key: 'edit',
+              label: 'Edit',
+              onClick: () => onUpdate(user.id),
+              icon: <EditOutlined />
+            },
+            {
+              key: 'delete',
+              label: 'Delete',
+              onClick: () => onDelete(user.id),
+              icon: <DeleteOutlined />
+            },
+          ]
+        }}
+      >
         <Button type='text'>
           <Space>
             Actions
             <DownOutlined />
           </Space>
         </Button>
-      </Dropdown>,
-      ...user 
+      </Dropdown>),
+      ...user
     })),
     [users, onDelete, onUpdate]
   );
 
   return <Card
-    title={
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingBlock: 20
-      }}>
-        <span>Users Manager</span>
-        <div>
-          <Button size='large' type='primary' icon={<UserAddOutlined />} onClick={() => onCreate()}>Add</Button>
-        </div>
-      </div>
-    }
+    title='Users Manager - CRUD'
     bodyStyle={{ padding: 0, borderTop: '1px solid rgba(0.0, 0.0, 0.0, 0.1)' }}
   >
     <Spin tip="Loading..." spinning={loading}>
@@ -80,7 +74,13 @@ const UsersListing: React.FC<UsersListingProps> = ({ loading, users, onDelete, o
             key: 'role'
           },
           {
-            title: '',
+            title: <Button
+              size='large'
+              type='primary'
+              className='create-user-btn'
+              icon={<UserAddOutlined />}
+              onClick={() => onCreate()}
+            >Add</Button>,
             dataIndex: 'actions',
             key: 'actions',
             align: 'right'
