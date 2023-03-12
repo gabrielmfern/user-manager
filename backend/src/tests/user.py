@@ -52,7 +52,7 @@ class TestUserMethods(unittest.TestCase):
         other_user.id = "123456"
         user.users = [example_user, other_user]
         delete("12345")
-        self.assertEquals(user.users, [other_user])
+        self.assertEqual(user.users, [other_user])
 
     def test_update(self):
         example_user = User("user", "email", "role")
@@ -65,9 +65,9 @@ class TestUserMethods(unittest.TestCase):
         update_user.id = "123456"
         update(update_user)
 
-        self.assertEquals(user.users[1].name, "")
-        self.assertEquals(user.users[1].email, "")
-        self.assertEquals(user.users[1].role, "")
+        self.assertEqual(user.users[1].name, "")
+        self.assertEqual(user.users[1].email, "")
+        self.assertEqual(user.users[1].role, "")
 
 if __name__ == '__main__':
     unittest.main()
