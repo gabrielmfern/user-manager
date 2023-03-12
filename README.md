@@ -37,8 +37,12 @@ You can find more specific information about the front-end in its [specific READ
 This project showcases a number of skills that are useful in software development:
 
 - Unit testing: the back-end API includes unit tests, which are fundamental for ensuring code quality and preventing regressions.
-- TypeScript: the front-end user interface was built using TypeScript, which helps ensure code quality and maintainability by catching errors at compile time rather than runtime.
-- React: the front-end user interface was built using React, which is currently the most popular frontend library and is widely used in industry.
+- TypeScript: the front-end user interface was built using TypeScript, which helps ensure code quality and maintainability 
+by catching errors at compile time rather than runtime.
+- React: the front-end user interface was built using React, which is currently the most popular frontend 
+library and is widely used in industry.
+- Git and documentation: As demonstrated from this README and the whole github repo, this project also demonstrates
+my skills utilizing a somewhat *agile* git workflow to work with other developers and collaborate.
 - Python: the back-end API was built using Python, which is a versatile and widely-used programming language often used in web development.
 
 ## How to run the project?
