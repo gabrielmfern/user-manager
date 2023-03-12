@@ -43,7 +43,8 @@ by catching errors at compile time rather than runtime.
 library and is widely used in industry.
 - Git and documentation: As demonstrated from this README and the whole github repo, this project also demonstrates
 my skills utilizing a somewhat *agile* git workflow to work with other developers and collaborate.
-- Python: the back-end API was built using Python, which is a versatile and widely-used programming language often used in web development.
+- Python: the back-end API was built using Python, which is a versatile and widely-used programming language often 
+used in web development.
 
 ## How to run the project?
 
