@@ -4,8 +4,8 @@ This is the front-end code responsible for interacting with the user data manage
 
 <table>
   <tr>
-    <td><img width="50%" src="./Screenshot 1.png" alt="Screenshot of the general usage of the listing of the users" /></td>
-    <td><img width="50%" src="./Screenshot 2.png" alt="Screenshot of the creation of a user" /></td>
+    <td><img src="./Screenshot 1.png" alt="Screenshot of the general usage of the listing of the users" /></td>
+    <td><img src="./Screenshot 2.png" alt="Screenshot of the creation of a user" /></td>
   </tr>
 </table>
 

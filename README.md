@@ -4,8 +4,8 @@ This is a project to showcase my skills with Python and React.
 
 <table>
   <tr>
-    <td><img src="./frontend/Screenshot 1.png" alt="Screenshot 1" width="50%"></td>
-    <td><img src="./frontend/Screenshot 2.png" alt="Screenshot 2" width="50%"></td>
+    <td><img src="./frontend/Screenshot 1.png" alt="Screenshot 1"></td>
+    <td><img src="./frontend/Screenshot 2.png" alt="Screenshot 2"></td>
   </tr>
 </table>
 
